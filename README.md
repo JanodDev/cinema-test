@@ -27,5 +27,3 @@ This is a simple web project using HTML, CSS, JavaScript, and PHP.
    - Use the contact form (`contact.php`) to send messages.
 
 ---
-
-If you have any issues, make sure your web server is running and that PHP is installed correctly. 
