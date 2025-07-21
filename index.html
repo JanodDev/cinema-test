@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movie Library</title>
+    <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+    <!-- App Bar / Header -->
+    <header class="appbar">
+      <div class="logo">
+        <img src="assets/Logo.png" alt="Logo" />
+      </div>
+      <nav class="nav-links">
+        <a href="#" class="active">HOME</a>
+        <a href="#">OUR SCREENS</a>
+        <a href="#">SCHEDULE</a>
+        <a href="#">MOVIE LIBRARY</a>
+        <a href="#">LOCATION & CONTACT</a>
+      </nav>
+      <div class="hamburger" id="hamburger-menu" aria-label="Open menu" tabindex="0">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+      <nav class="mobile-menu" id="mobile-menu">
+        <a href="#" class="active">HOME</a>
+        <a href="#">OUR SCREENS</a>
+        <a href="#">SCHEDULE</a>
+        <a href="#">MOVIE LIBRARY</a>
+        <a href="#">LOCATION & CONTACT</a>
+      </nav>
+    </header>
+
+    <!-- Main Visual / Slideshow -->
+    <section class="main-visual">
+      <div class="slideshow-container">
+        <div class="slide fade active">
+          <img src="assets/banner.png" alt="Slide 1" />
+        </div>
+        <div class="slide fade">
+          <img src="assets/banner2.jpg" alt="Slide 2" />
+        </div>
+        <div class="slide fade">
+          <img src="assets/banner3.jpg" alt="Slide 3" />
+        </div>
+        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+        <a class="next" onclick="plusSlides(1)">&#10095;</a>
+      </div>
+    </section>
+
+    <!-- Site Introduction -->
+    <section class="site-intro">
+      <h1>Movie Library</h1>
+      <p>Discover, search, and collect your favourite movies. Explore our curated selection and add your own picks to your personal library.</p>
+    </section>
+
+    <!-- Collect Your Favourites -->
+    <section class="favourites">
+        <h2>Collect your favourites</h2>
+        <div class="search-bar">
+            <svg class="search-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="11" cy="11" r="7" stroke-width="2"/><line x1="16.5" y1="16.5" x2="21" y2="21" stroke-width="2" stroke-linecap="round"/></svg>
+            <input type="text" id="movie-search" placeholder="Search for a movie...">
+        </div>
+        <div class="divider"></div>
+        <div class="movie-grid" id="movie-grid">
+            <!-- Static movie cards -->
+            <div class="movie-card">
+                <img src="assets/batman.png" alt="Batman Returns">
+                <h3>Batman Returns</h3>
+                <p>Short description of Batman Returns.</p>
+            </div>
+            <div class="movie-card">
+                <img src="assets/wildwest.png" alt="Wild Wild West">
+                <h3>Wild Wild West</h3>
+                <p>Short description of Wild Wild West.</p>
+            </div>
+            <div class="movie-card">
+                <img src="assets/spiderman.png" alt="The Amazing Spiderman">
+                <h3>The Amazing Spiderman</h3>
+                <p>Short description of The Amazing Spiderman.</p>
+            </div>
+            <!-- API-fetched movies will be added here by JS -->
+        </div>
+    </section>
+
+    <!-- Contact Us -->
+    <section class="contact">
+        <h2>How to reach us</h2>
+        <div class="subtitle">Lorem ipsum dolor sit amet, consectetur.</div>
+        <form id="contact-form">
+            <div class="form-row">
+                <input type="text" id="first-name" name="first-name" placeholder="First Name *" required>
+                <input type="text" id="last-name" name="last-name" placeholder="Last Name *" required>
+            </div>
+            <input type="email" id="email" name="email" placeholder="Email *" required>
+            <input type="tel" id="phone" name="phone" placeholder="Telephone">
+            <textarea id="comments" name="comments" placeholder="Message" required></textarea>
+            <span style="color:#bbb; font-size:0.95rem;">*required fields</span>
+            <label>
+                <input type="checkbox" id="terms" required>
+                I agree to the <a href="#" class="terms-link">Terms & Conditions</a>
+            </label>
+            <button type="submit">SUBMIT</button>
+        </form>
+        <div class="map">
+            <!-- Google Maps Embed for eBEYONDS eBusiness & Digital Solutions -->
+            <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d63344.28201999444!2d79.9404323!3d6.8448212!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ae25069caa2f53b%3A0xe7eae3a8b1f1214d!2seBEYONDS%20eBusiness%20%26%20Digital%20Solutions!5e0!3m2!1sen!2slk!4v1680000000000!5m2!1sen!2slk"
+                width="100%"
+                height="350"
+                style="border:0;"
+                allowfullscreen=""
+                loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade">
+            </iframe>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+      <div class="footer-main">
+        <div class="footer-info">
+          <strong>IT Group</strong><br>
+          C. Salvador de Madariaga, 1<br>
+          28027 Madrid<br>
+          Spain
+        </div>
+        <div class="footer-social">
+          <span>Follow us on</span>
+          <a href="#" aria-label="Twitter" class="footer-icon">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M22.46 5.924c-.793.352-1.645.59-2.54.698a4.48 4.48 0 0 0 1.965-2.475 8.94 8.94 0 0 1-2.828 1.082A4.48 4.48 0 0 0 16.11 4c-2.48 0-4.49 2.014-4.49 4.496 0 .353.04.697.116 1.025C7.728 9.37 4.1 7.555 1.67 4.905a4.49 4.49 0 0 0-.61 2.263c0 1.563.796 2.944 2.008 3.755a4.48 4.48 0 0 1-2.034-.563v.057c0 2.184 1.553 4.006 3.617 4.422a4.51 4.51 0 0 1-2.027.077c.572 1.785 2.23 3.084 4.195 3.12A8.99 8.99 0 0 1 2 19.54a12.7 12.7 0 0 0 6.88 2.017c8.253 0 12.77-6.835 12.77-12.77 0-.195-.004-.39-.013-.583A9.14 9.14 0 0 0 24 4.59a8.98 8.98 0 0 1-2.54.698z" fill="#fff"/></svg>
+          </a>
+          <a href="#" aria-label="YouTube" class="footer-icon">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M23.498 6.186a2.997 2.997 0 0 0-2.112-2.12C19.505 3.5 12 3.5 12 3.5s-7.505 0-9.386.566A2.997 2.997 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a2.997 2.997 0 0 0 2.112 2.12C4.495 20.5 12 20.5 12 20.5s7.505 0 9.386-.566a2.997 2.997 0 0 0 2.112-2.12C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z" fill="#fff"/></svg>
+          </a>
+        </div>
+      </div>
+      <div class="footer-divider"></div>
+      <div class="footer-bottom">
+        <span>Copyright &copy; 2022 IT Hotel is. All rights reserved.</span>
+        <span class="footer-credits">Photos by Felix Mooneeram &amp; <a href="https://unsplash.com/@serge_k" target="_blank" rel="noopener">Serge Kutuzov</a> on <a href="https://unsplash.com/" target="_blank" rel="noopener">Unsplash</a></span>
+      </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html> 
